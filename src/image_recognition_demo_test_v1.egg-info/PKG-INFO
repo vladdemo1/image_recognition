@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: image-recognition-demo-test-v1
+Version: 0.1.0
+Summary: Test package about image recognition
+Home-page: https://github.com/vladdemo1/image_recognition
+Author: vladdemo1
+Author-email: vladdemo140@gmail.com
+Project-URL: Bug Tracker, https://github.com/vladdemo1/image_recognition/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 
 # Make sure you have upgraded version of pip
 

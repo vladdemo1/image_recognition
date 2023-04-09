@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/image_recognition_demo_test/__init__.py
+src/image_recognition_demo_test/main.py
+src/image_recognition_demo_test_v1.egg-info/PKG-INFO
+src/image_recognition_demo_test_v1.egg-info/SOURCES.txt
+src/image_recognition_demo_test_v1.egg-info/dependency_links.txt
+src/image_recognition_demo_test_v1.egg-info/top_level.txt

@@ -2,6 +2,7 @@
 This module contains main controller about gets text from image
 """
 
+import os
 from image import Image
 from facade import ImageFacade
 
@@ -27,6 +28,8 @@ class Recognition:
         Args:
             - image_path (str): The path to the image for text recognition.
         """
+        if not os.path.isfile(image_path):
+            raise FileNotFoundError(f"Image file not found at path: {image_path}")
         self.image_path = image_path
         self.image_package = Image()
         self.image_facade = ImageFacade(self.image_package)

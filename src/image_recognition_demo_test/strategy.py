@@ -47,6 +47,9 @@ class TextExtractionStrategy(ImageProcessingStrategy):
         Returns:
             - The extracted text from the image.
         """
+        supported_languages = ['eng']
+        if language not in supported_languages:
+            raise ValueError(f"Unsupported language: {language}. Supported languages: {', '.join(supported_languages)}")
         image = PILImage.open(image_path)
         return pytesseract.image_to_string(image, lang=language)
 

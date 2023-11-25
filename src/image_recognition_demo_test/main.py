@@ -58,7 +58,7 @@ class ImageRecognition:
         recognition = Recognition(self.image_path)
         extracted_text = recognition.process_text_extraction(self.language)
 
-        cleaned_text = extracted_text.replace('\n', ' ').replace('\x0c', '')
+        cleaned_text = extracted_text.replace('\n', ' ').replace('\x0c', '').rstrip()
         return cleaned_text
     
 

@@ -3,8 +3,8 @@ This module contains main controller about gets text from image
 """
 
 import os
-from image import Image
-from facade import ImageFacade
+from .image import Image
+from .facade import ImageFacade
 
 
 class Recognition:

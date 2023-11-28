@@ -2,9 +2,10 @@
 This module contains main Singleton class
 """
 
+
 class SingletonMeta(type):
     """
-    The Singleton meta class
+    The Singleton metaclass
     """
 
     _instances = {}

@@ -2,10 +2,9 @@
 This module contains main class for model Image
 """
 
-from PIL import Image as PILImage
 
-from singleton import SingletonMeta
-from strategy import TextExtractionStrategy, EdgeDetectionStrategy
+from .singleton import SingletonMeta
+from .strategy import TextExtractionStrategy, EdgeDetectionStrategy
 
 
 class Image(metaclass=SingletonMeta):

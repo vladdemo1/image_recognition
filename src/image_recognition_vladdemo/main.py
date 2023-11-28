@@ -2,7 +2,7 @@
 This module contains simple function for test
 """
 
-from recognition import Recognition
+from .recognition import Recognition
 
 
 class ImageRecognition:

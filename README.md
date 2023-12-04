@@ -150,7 +150,7 @@ python3 -m pip install --upgrade build
 
 ### _Create the build_
 ```
-python -m build
+python3 -m build
 ```
 
 ### _Uploading - pre_
@@ -164,5 +164,5 @@ python3 -m pip install --upgrade twine
 
 #### _Linux_
 ```
-python3 -m twine upload --repository pypi dist/*
+python3 -m twine upload dist/*
 ```

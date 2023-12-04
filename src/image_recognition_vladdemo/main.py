@@ -1,5 +1,5 @@
 """
-This module contains simple function for test
+This module contains base func for image recognition
 """
 
 from .recognition import Recognition

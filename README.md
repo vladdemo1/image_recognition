@@ -1,12 +1,75 @@
+# _Python package with image recognition functionality by vladdemo_
 
-# Make sure you have upgraded version of pip
+```
+This package was developed for scientific purposes, the use of which is available to everyone
+```
 
-Linux
+## _How to install_
+```
+The package will be installed using pip
+```
+
+### _Set up a virtual environment for your new Python project_
+
+```
+python3 -m venv image_recognition_venv
+```
+#### _After that, go to your project and open the virtual environment directory, activate it._
+
+```
+source <path_to_venv>/bin/activate
+```
+
+### _Installing the package_
+
+```
+pip install image-recognition-vladdemo
+```
+
+## _Using functionality in a project_
+
+### _Imports_
+
+```python
+from image_recognition_vladdemo.main import ImageRecognition
+```
+#### _This import allows you to get the main class_
+
+### _Main Variables_
+
+```python
+image_path = "new.png"
+language = "eng"
+```
+
+_The path to the image can be specified direct or relative. Next we indicate the language._
+
+### Creating an Object
+
+```python
+image = ImageRecognition(image_path, language)
+```
+
+### Getting text from an image
+
+```python
+text = image.get_text_from_photo()
+```
+
+#### Congratulations. You got the text from the image.
+
+```python
+author = "Vlad Demchenko"
+```
+
+## _Additional instructions for creating your own Python package and uploading to PyPI_
+
+#### _Linux_
 ```
 python3 -m pip install --upgrade pip
 ```
 
-## Create a project with the following structure
+### _Create a project with the following structure_
 ```
 image_recognition/
 ├── LICENSE
@@ -30,9 +93,9 @@ touch src/image_recognition_demo_test/main.py
 mkdir tests
 ```
 
-## pyproject.toml 
+### _pyproject.toml_
 
-This file tells tools like pip and build how to create your project
+#### _This file tells tools like pip and build how to create your project_
 
 ```
 [build-system]
@@ -42,13 +105,13 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 ```
-build-system.requires gives a list of packages that are needed to build your package. Listing something here will only make it available during the build, not after it is installed.
+_build-system.requires gives a list of packages that are needed to build your package. Listing something here will only make it available during the build, not after it is installed._
 
-build-system.build-backend is the name of Python object that will be used to perform the build. If you were to use a different build system, such as flit or poetry, those would go here, and the configuration details would be completely different than the setuptools configuration described below.
+_build-system.build-backend is the name of Python object that will be used to perform the build. If you were to use a different build system, such as flit or poetry, those would go here, and the configuration details would be completely different than the setuptools configuration described below._
 
 
-# Setup.cfg setup
-Using setup.cfg is a best practice, but you could have a dynamic setup file using setup.py
+### _Setup.cfg setup_
+#### _Using setup.cfg is a best practice, but you could have a dynamic setup file using setup.py_
 
 ```
 [metadata]
@@ -77,30 +140,29 @@ python_requires = >=3.6
 where = src
 
 ```
-# Running the build
-### Make sure your build tool is up to date
+## _Running the build_
+### _Make sure your build tool is up to date_
 
-Linux
+#### _Linux_
 ```
 python3 -m pip install --upgrade build
 ```
 
-
-### Create the build
+### _Create the build_
 ```
 python -m build
 ```
 
-### Uploading - pre
+### _Uploading - pre_
 
-Linux
+#### _Linux_
 ```
 python3 -m pip install --upgrade twine
 ```
 
-### Upload
+### _Upload_
 
-Linux
+#### _Linux_
 ```
-python3 -m twine upload --repository testpypi dist/*
+python3 -m twine upload --repository pypi dist/*
 ```
